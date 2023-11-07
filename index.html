@@ -1,0 +1,60 @@
+<html>
+
+<head>
+    <title>Math Quiz</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="fabric.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <script src="main.js"></script>
+</head>
+
+<body>
+    <center>
+        <h1 id="l1">Welcome to the Math quiz website</h1>
+        <h2 style="color:white;">Please enter your name</h2>
+        <br>
+        <div class="container" id="p1_login_section">
+            <h2>Name for Player 1:</h2>
+            <br>
+            <br>
+            <input id="input1" type="text" class="form-control" placeholder="Enter Name Here">
+        </div>
+        <br>
+        <br>
+        <div class="container" id="p2_login_section">
+            <h2>Name for Player 2:</h2>
+            <br>
+            <br>
+            <input id="input2" class="form-control" type="text" placeholder="Enter Name Here">
+        </div>
+        <br>
+        <button id="submit" onclick="submit()" class="btn btn-success" style="height:10%; width:20%;">
+            <h2>Click to login</h2>
+        </button>
+
+        <script>
+
+            function submit() {
+                var player_1_name = document.getElementById("input1").value;
+                var player_2_name = document.getElementById("input2").value;
+
+                localStorage.setItem("input_1", player_1_name);
+                localStorage.setItem("input_2", player_2_name);
+
+                console.log(player_1_name, player_2_name);
+
+                window.location = "Quiz_Game_Page.html";
+            }
+        </script>
+    </center>
+</body>
+
+</html>
